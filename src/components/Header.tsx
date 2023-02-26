@@ -1,22 +1,15 @@
 import { forwardRef } from "react";
 import type { PropsWithChildren } from "react";
-import cn from "classnames";
 
 const Link = forwardRef<
   HTMLAnchorElement,
   PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>>
 >(({ children, ...props }, ref) => {
-  const path = typeof window !== "undefined" ? window.location.pathname : "";
-  const isActive = path === props.href;
-
   return (
     <a
       {...props}
       ref={ref}
-      className={cn(
-        isActive ? "bg-slate-200" : "",
-        "font-bold text-slate-800 dark:text-slate-200 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-all"
-      )}
+      className="font-bold text-slate-800 dark:text-slate-200 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-all"
     >
       {children}
     </a>
