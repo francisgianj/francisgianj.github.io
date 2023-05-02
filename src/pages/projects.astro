@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "@components/ProjectCard";
+---
+
+<Layout title="Projects | Francis Gian Juson">
+  <h1 class="text-black dark:text-white font-bold text-3xl font-serif">
+    Projects
+  </h1>
+  <h2 class="text-gray-500 dark:text-gray-400 text-lg font-bold mb-10">
+    Here are some of my projects
+  </h2>
+
+  <div class="flex flex-col gap-4">
+    <ProjectCard
+      imageSrc="/public/static/images/1-day-promotion-landing.jpg"
+      title="1 Day Promotion"
+      description="1 Day Promotion is an e-commerce platform that specializes in delivering groceries to customers' doorsteps. To develop this project, I utilized Next.js and Tailwind CSS, along with Strapi, a Headless CMS."
+      href="https://www.onedaypromotion.com/"
+    />
+    <ProjectCard
+      imageSrc="/public/static/images/e-track-landing.jpg"
+      title="E-Track"
+      description="E-Track was an online examination platform that I developed for one of my freelance projects. It was designed to assist incoming BSIT third-year students at Bulacan State University with track selection. I used Next.js at the frontend and Supabase, a backend-as-a-service, to handle the users and their data efficiently."
+      href="https://e-track-bulsu.vercel.app/"
+    />
+    <ProjectCard
+      title="This Very Website :)"
+      description="This very website was built using Astro, alongside with TailwindCSS and a touch of React, defining what I have been working on, what I have accomplished, and who I have become. If you'd like to learn more about me, you can visit the About page."
+      href="http://francisgianj.github.io/"
+    />
+  </div>
+</Layout>
